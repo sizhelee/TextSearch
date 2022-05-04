@@ -60,11 +60,13 @@ class MainPanel:
         print("[Client] send terms: {}".format(str_terms))
         client.send(str_terms.encode())
 
-        str_title = client.recv(1024).decode("utf-8")
+        str_title = client.recv(8192).decode("utf-8")
         self.titles = str_title.split(" ")
+        if self.titles == ['']:
+            self.titles = []
         print("[Client] Search Results: {}".format(self.titles))
 
-        while True:
+        while len(self.titles) > 0:
 
             head_struct = client.recv(4)
             head_len = struct.unpack('i', head_struct)[0]
@@ -89,7 +91,7 @@ class MainPanel:
                     recv_len += len(recv_mesg)
                     f.write(recv_mesg)
                     f.close()
-                    print("[Client] Successfully receive files!")
+                    print("[Client] Successfully receive file {}".format(filename))
 
             # 向服务器发送信号，文件已经上传完毕
             completed = "ACK"

@@ -5,22 +5,48 @@ import json
 from time import sleep
 import os
 import struct
+import pandas as pd
+
+
+def cal_news_score(goal, title_cnt, term_cnt):
+    return (goal+term_cnt*10)*(title_cnt+1)
 
 
 class LocalServer(object):
     def __init__(self, host, port):
         self.address = (host, port)
-        self.documents = [4, 5, 6]
-        self.documentpath = "./preprocess/"
+        self.documents = []
+        self.documentpath = "./server_files/news/"
+        self.df = pd.read_csv("./data/all_news.csv")
+
+    def text_search(self, terms):
+        result = []
+        for item in self.df.iloc():
+            goal = 0
+            title_cnt = 0
+            term_cnt = 0
+            for term in terms:
+                if term in item.body:
+                    term_cnt += 1
+                goal += item.body.count(term)
+                title_cnt += item.title.count(term)
+            score = cal_news_score(goal, title_cnt, term_cnt)
+            if score > 30:
+                result.append((int(item.id), score))
+        result = sorted(result, key=lambda x: (x[1], x[0]))
+        self.documents = [i[0] for i in result]
 
     def func_server(self, conn, terms, lock):
         lock.acquire()
         print("[Server] Func searching_text receive terms: {}".format(terms))
-        file_cnt = 0
+
+        self.text_search(terms)
+        print("[Server] documents: {}".format(self.documents))
 
         str_document = ' '.join(map(lambda x: str(x), self.documents))
         conn.send(str_document.encode())
 
+        file_cnt = 0
         for item in self.documents:
             file_cnt += 1
             filename = "{}{}.txt".format(self.documentpath, item)
