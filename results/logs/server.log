@@ -335,3 +335,45 @@
 2022-05-06 00:25:14,617 - INFO - [Server] Client download file ./server_files/news/1864.txt successfully!
 2022-05-06 00:25:14,619 - INFO - [Server] Client download file ./server_files/news/2156.txt successfully!
 2022-05-06 00:25:14,621 - INFO - [Server] Client download file ./server_files/news/128.txt successfully!
+2022-05-06 03:11:25,996 - INFO - [Server] Successfully init! feat shape: (2225, 1000)
+2022-05-06 03:11:25,997 - INFO - [Server] Waiting for connecting to client...
+2022-05-06 03:11:38,278 - INFO - [Server] Connected to address ('127.0.0.1', 59300), socket id: <socket.socket fd=2468, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1234), raddr=('127.0.0.1', 59300)>
+2022-05-06 03:11:38,279 - INFO - [Server] received terms: math technology, sim_mode: 0
+2022-05-06 03:11:38,281 - INFO - [Server] Func searching_text receive terms: ['math', 'technology']
+2022-05-06 03:11:38,281 - INFO - [Server] Waiting for connecting to client...
+2022-05-06 03:11:38,686 - INFO - [Server] documents: [913, 1931, 2144, 2150, 1998, 1967, 2012, 2044, 2049, 1986]
+2022-05-06 03:11:38,689 - INFO - [Server] Client download file ./server_files/news/913.txt successfully!
+2022-05-06 03:11:38,691 - INFO - [Server] Client download file ./server_files/news/1931.txt successfully!
+2022-05-06 03:11:38,692 - INFO - [Server] Client download file ./server_files/news/2144.txt successfully!
+2022-05-06 03:11:38,694 - INFO - [Server] Client download file ./server_files/news/2150.txt successfully!
+2022-05-06 03:11:38,696 - INFO - [Server] Client download file ./server_files/news/1998.txt successfully!
+2022-05-06 03:11:38,698 - INFO - [Server] Client download file ./server_files/news/1967.txt successfully!
+2022-05-06 03:11:38,699 - INFO - [Server] Client download file ./server_files/news/2012.txt successfully!
+2022-05-06 03:11:38,701 - INFO - [Server] Client download file ./server_files/news/2044.txt successfully!
+2022-05-06 03:11:38,702 - INFO - [Server] Client download file ./server_files/news/2049.txt successfully!
+2022-05-06 03:11:38,704 - INFO - [Server] Client download file ./server_files/news/1986.txt successfully!
+2022-05-06 03:12:40,527 - INFO - [Server] Successfully init! feat shape: (2225, 1000)
+2022-05-06 03:12:40,528 - INFO - [Server] Waiting for connecting to client...
+2022-05-06 03:12:52,577 - INFO - [Server] Connected to address ('127.0.0.1', 59329), socket id: <socket.socket fd=692, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1234), raddr=('127.0.0.1', 59329)>
+2022-05-06 03:12:52,597 - INFO - [Server] received terms: math technology, sim_mode: 0
+2022-05-06 03:12:52,605 - INFO - [Server] Func searching_text receive terms: ['math', 'technology']
+2022-05-06 03:12:52,605 - INFO - [Server] Waiting for connecting to client...
+2022-05-06 03:12:54,212 - INFO - [Server] documents: [1931, 1878, 1976, 1866, 2163, 2111, 2196, 944, 1986, 1973, 1849, 2141, 2113, 1922, 2028, 1830, 2174, 251]
+2022-05-06 03:12:54,215 - INFO - [Server] Client download file ./server_files/news/1931.txt successfully!
+2022-05-06 03:12:54,216 - INFO - [Server] Client download file ./server_files/news/1878.txt successfully!
+2022-05-06 03:12:54,218 - INFO - [Server] Client download file ./server_files/news/1976.txt successfully!
+2022-05-06 03:12:54,219 - INFO - [Server] Client download file ./server_files/news/1866.txt successfully!
+2022-05-06 03:12:54,221 - INFO - [Server] Client download file ./server_files/news/2163.txt successfully!
+2022-05-06 03:12:54,222 - INFO - [Server] Client download file ./server_files/news/2111.txt successfully!
+2022-05-06 03:12:54,224 - INFO - [Server] Client download file ./server_files/news/2196.txt successfully!
+2022-05-06 03:12:54,225 - INFO - [Server] Client download file ./server_files/news/944.txt successfully!
+2022-05-06 03:12:54,227 - INFO - [Server] Client download file ./server_files/news/1986.txt successfully!
+2022-05-06 03:12:54,229 - INFO - [Server] Client download file ./server_files/news/1973.txt successfully!
+2022-05-06 03:12:54,232 - INFO - [Server] Client download file ./server_files/news/1849.txt successfully!
+2022-05-06 03:12:54,234 - INFO - [Server] Client download file ./server_files/news/2141.txt successfully!
+2022-05-06 03:12:54,235 - INFO - [Server] Client download file ./server_files/news/2113.txt successfully!
+2022-05-06 03:12:54,236 - INFO - [Server] Client download file ./server_files/news/1922.txt successfully!
+2022-05-06 03:12:54,240 - INFO - [Server] Client download file ./server_files/news/2028.txt successfully!
+2022-05-06 03:12:54,243 - INFO - [Server] Client download file ./server_files/news/1830.txt successfully!
+2022-05-06 03:12:54,245 - INFO - [Server] Client download file ./server_files/news/2174.txt successfully!
+2022-05-06 03:12:54,246 - INFO - [Server] Client download file ./server_files/news/251.txt successfully!
