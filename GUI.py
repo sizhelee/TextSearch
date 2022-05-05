@@ -27,6 +27,8 @@ class MainPanel:
         self.new_searchterm_entry.pack()
         self.confirm_button = tk.Button(self.root, text="开始检索", font=(
             None, 12), command=self.check_new_searchterm).pack(pady=40)
+        self.confirm_button_sim = tk.Button(self.root, text="模糊匹配", font=(
+            None, 12), command=self.check_new_searchterm_sim).pack(pady=40)
 
         self.hint_label = tk.Label(self.root, text="", font=(None, 12))
         self.hint_label.pack()
@@ -43,9 +45,21 @@ class MainPanel:
         if len(terms) == 0 or len(terms) > 3:
             self.hint_label.config(text=f"请输入1-3个检索词")
         else:
-            self.search_request(terms)
+            self.search_request(terms, sim=0)
 
-    def search_request(self, terms):
+    def check_new_searchterm_sim(self):
+        """
+        用户点击"确认"按钮后，检查输入是否合法
+        """
+        searchterm = self.new_searchterm_entry.get()
+        terms = searchterm.split(' ')
+        terms = [i for i in terms if i != '']
+        if len(terms) == 0 or len(terms) > 3:
+            self.hint_label.config(text=f"请输入1-3个检索词")
+        else:
+            self.search_request(terms, sim=1)
+
+    def search_request(self, terms, sim=0):
         """
         TODO: 请补充实现客户端与服务器端的通信
 
@@ -53,11 +67,11 @@ class MainPanel:
         2. 接受服务器返回的检索结果
 
         """
-        str_terms = ' '.join(terms)
+        str_terms = str(sim)+' '.join(terms)
 
         client = socket.socket()
         client.connect(self.addr)
-        print("[Client] send terms: {}".format(str_terms))
+        print("[Client] send terms: {}".format(str_terms[1:]))
         client.send(str_terms.encode())
 
         str_title = client.recv(8192).decode("utf-8")

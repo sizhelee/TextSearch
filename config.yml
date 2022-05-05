@@ -1,0 +1,16 @@
+path:
+  news_fold: "./server_files/news/"
+  news_csv: "./data/all_news.csv"
+  news_feats: "./server_files/file_feats_1000.npy"
+  vocab_csv: "./server_files/vocab.csv"
+  news_sim: "./server_files/similarity.npy"
+  word_sim: "./server_files/synonym.json"
+  result_log: "./results/logs/result.log"
+  server_log: "./results/logs/server.log"
+model:
+  threshold_news_sim: 0.1
+  threshold_news_score: 20
+  threshold_news_cos: 0.008
+  buf_size: 1024
+consts:
+  num_news: 2225
